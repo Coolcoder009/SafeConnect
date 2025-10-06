@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Login & Signup</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container" id="auth-container">
+        <div class="form-container">
+            <div class="toggle-container">
+                <div class="toggle-btn active" id="login-toggle">Login</div>
+                <div class="toggle-btn" id="signup-toggle">Sign Up</div>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="form active">
+                <h2 class="form-title">Welcome Back</h2>
+                
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-age">Age</label>
+                    <input type="number" id="login-age" placeholder="Enter your age" min="1" max="120" required>
+                    <div class="age-warning" id="login-age-warning">You must be 18 or older to register without guardian consent.</div>
+                </div>
+                
+                <div class="guardian-info" id="login-guardian-info">
+                    <h4>Guardian Information</h4>
+                    <div class="form-group">
+                        <label for="login-guardian-name">Guardian Name</label>
+                        <input type="text" id="login-guardian-name" placeholder="Enter guardian's full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-guardian-phone">Guardian Phone</label>
+                        <input type="tel" id="login-guardian-phone" placeholder="Enter guardian's phone number">
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Login</button>
+                
+                <div class="success-message" id="login-success">
+                    Login successful! Redirecting...
+                </div>
+                
+                <div class="form-footer">
+                    <a href="#" class="forgot-password">Forgot your password?</a>
+                </div>
+            </form>
+            
+            <!-- Signup Form -->
+            <form id="signup-form" class="form">
+                <h2 class="form-title">Create Account</h2>
+                
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-age">Age</label>
+                    <input type="number" id="signup-age" placeholder="Enter your age" min="1" max="120" required>
+                    <div class="age-warning" id="signup-age-warning">You must be 18 or older to register without guardian consent.</div>
+                </div>
+                
+                <div class="guardian-info" id="signup-guardian-info">
+                    <h4>Guardian Information</h4>
+                    <div class="form-group">
+                        <label for="signup-guardian-name">Guardian Name</label>
+                        <input type="text" id="signup-guardian-name" placeholder="Enter guardian's full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-guardian-phone">Guardian Phone</label>
+                        <input type="tel" id="signup-guardian-phone" placeholder="Enter guardian's phone number">
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Create Account</button>
+                
+                <div class="success-message" id="signup-success">
+                    Account created successfully! Welcome aboard!
+                </div>
+                
+                <div class="form-footer">
+                    <p>By creating an account, you agree to our <a href="#">Terms of Service</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
